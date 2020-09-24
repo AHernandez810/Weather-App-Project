@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherAppProject</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-input">
+        <form class="search">
+          <input
+            type="text"
+            placeholder="Enter your location"
+            class="input-bar"
+          />
+          <input type="submit" value="Search" class="search-button" />
+          <button type="submit" class="Use-Current-Location-Button">
+            Use Current Location
+          </button>
+        </form>
+      </div>
+      <h2 id="location">Wappingers Falls, NY</h2>
+      <h2>
+        🌥
+        <strong id="temperature"> 75° </strong>
+        <br />
+        Partly Sunny
+      </h2>
+      <h5>Current Date</h5>
+      <h4>
+        <span id="humidity"> Humidity: 53% </span>
+        <br />
+        <span id="wind"> Wind: 13 mph </span>
+        <br />
+        <span id="feels-like"> Feels Like : 75° </span>
+      </h4>
+      <br />
+      <br />
+      <div class="row">
+        <div class="col">
+          Mon 31
+          <br />
+          ☁
+          <br />
+          76° 60°
+          <br />
+          <em> Mostly Cloudy </em>
+        </div>
+        <div class="col">
+          Tues 1
+          <br />
+          🌧
+          <br />
+          71° 62°
+          <br />
+          <em> Light Rain </em>
+        </div>
+        <div class="col">
+          Wed 2
+          <br />
+          ⛅
+          <br />
+          76° 68°
+          <br />
+          <em> Partly Sunny </em>
+        </div>
+        <div class="col">
+          Thu 3
+          <br />
+          ⛅
+          <br />
+          81° 71°
+          <br />
+          <em> Partly Sunny </em>
+        </div>
+        <div class="col">
+          Fri 4
+          <br />
+          ☀
+          <br />
+          78° 55°
+          <br />
+          <em> Sunny </em>
+        </div>
+        <div class="col">
+          Sat 5
+          <br />
+          ☀
+          <br />
+          73° 56°
+          <br />
+          <em> Sunny </em>
+        </div>
+      </div>
+    </div>
+    <script src="SRC/index.js"></script>
+  </body>
+</html>

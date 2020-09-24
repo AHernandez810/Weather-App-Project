@@ -1,0 +1,32 @@
+html {
+  height: 100;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(to top, #e6dee9, #fdcbf1);
+}
+
+h2,
+h5 {
+  position: relative;
+  top: 50px;
+  left: 0px;
+}
+h4 {
+  color: #939aa9;
+  position: relative;
+  text-align: center;
+  top: -50px;
+  left: 150px;
+}
+.row {
+  border: 2px solid #f6f4e6;
+  padding: 15px;
+}
+.col {
+  color: #797a7e;
+}
