@@ -23,10 +23,15 @@ h4 {
   top: -50px;
   left: 150px;
 }
+
 .row {
   border: 2px solid #f6f4e6;
   padding: 15px;
 }
 .col {
   color: #797a7e;
+}
+.link {
+  font-size: small;
+  text-align: center;
 }
