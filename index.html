@@ -5,55 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeatherAppProject</title>
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      <div class="weather-project">
-        <div class="search-input">
-          <form class="search">
-            <input
-            type="text"
-            placeholder="Enter your location"
-            class="input-bar"
-            />
-            <input type="submit" value="Search" class="search-button" />
-            <button type="submit" class="Use-Current-Location-Button">
-              Use Current Location
-            </button>
-          </form>
-        </div>
-        <h2 id="location">Wappingers Falls, NY</h2>
-        <h2>
-          🌥
-          <strong id="temperature"> 75° </strong>
-          <br />
-          Partly Sunny
-        </h2>
-        <h5>Current Date</h5>
-        <h4>
-          <span id="humidity"> Humidity: 53% </span>
-          <br />
-          <span id="wind"> Wind: 13 mph </span>
-          <br />
-          <span id="feels-like"> Feels Like : 75° </span>
-        </h4>
-        <br />
-        <br />
-        <div class="row">
-          <div class="col-2">
-            Mon 31
+      <div class="wrapper">
+        <div class="weather-project">
+            <form id="search-form" class="mb-3">
+              <div class="row">
+                <div class="col-9">
+                  <input type="search" placeholder="Enter your location" class="form-control" id="city-input" autocomplete="off" />
+                </div>
+                <div class="col-3">
+                  <input type="submit" value="Search" class="btn btn-primary w-100" />
+                </div>
+              </div>
+            </form>
+          <h2 id="location">Wappingers Falls, NY</h2>
+          <h2>
+            🌥
+            <strong id="temperature"> 75° </strong>
             <br />
-            ☁
+            Partly Sunny
+          </h2>
+          <h5>Current Date</h5>
+          <h4>
+            <span id="humidity"> Humidity: 53% </span>
             <br />
-            76° 60°
+            <span id="wind"> Wind: 13 mph </span>
             <br />
+            <span id="feels-like"> Feels Like : 75° </span>
+          </h4>
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-2">
+              Mon 31
+              <br />
+              ☁
+              <br />
+              76° 60°
+              <br />
             <em> Mostly Cloudy </em>
           </div>
           <div class="col-2">
@@ -82,35 +80,35 @@
             81° 71°
             <br />
             <em> Partly Sunny </em>
-        </div>
-        <div class="col-2">
-          Fri 4
-          <br />
-          ☀
-          <br />
-          78° 55°
-          <br />
-          <em> Sunny </em>
-        </div>
-        <div class="col-2">
-          Sat 5
-          <br />
-          ☀
-          <br />
+          </div>
+          <div class="col-2">
+            Fri 4
+            <br />
+            ☀
+            <br />
+            78° 55°
+            <br />
+            <em> Sunny </em>
+          </div>
+          <div class="col-2">
+            Sat 5
+            <br />
+            ☀
+            <br />
           73° 56°
           <br />
           <em> Sunny </em>
         </div>
+        <small>
+          <a
+          href="https://github.com/AHernandez810/Weather-App-Project"
+          target="blank"
+          >Open-Source Code</a
+          >
+          by Ashley Hernandez
+        </small>
       </div>
     </div>
-    <p class="link">
-      <a
-      href="https://github.com/AHernandez810/Weather-App-Project"
-      target="blank"
-      >Open-Source Code</a
-      >
-      by Ashley Hernandez
-    </p>
     <script src="SRC/index.js"></script>
   </body>
   </html>
