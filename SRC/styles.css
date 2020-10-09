@@ -5,8 +5,9 @@ html {
 .weather-project {
   max-width: 900px;
   margin: 50px auto;
-  border: 2px solid #f6f4e6;
+  border: 2px solid #373a40;
   border-radius: 15px;
+  background-image: linear-gradient(to top, #e6dee9, #fdcbf1);
 }
 
 body {
@@ -14,7 +15,6 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(to top, #e6dee9, #fdcbf1);
 }
 
 h2,
