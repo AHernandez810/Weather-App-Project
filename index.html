@@ -38,16 +38,34 @@
                 </li>
               </ul>
             </div>
-            <h4>
-            <span id="humidity"> Humidity: 53% </span>
-            <br />
-            <span id="wind"> Wind: 13 mph </span>
-            <br />
-            <span id="feels-like"> Feels Like : 75° </span>
-          </h4>
-          <br />
-          <br />
-          <div class="row">
+            <div class="main-temp">
+              <div class="col-6">
+                <div class="weather-temp">
+                  <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-50-512.png" 
+                  alt="clear moon"
+                  class="float-left"
+                  width ="50" />
+                  <div class="float-left">
+                    <strong id="temperature">43</strong>
+                    <span class="units">
+                      <a href="#" id="celsius-link" class="active">°C</a> |
+                      <a href="#" id="fahrenheit-link">°F</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+               <ul>
+                 <li>
+                   <span id="humidity"> Humidity: 53% </span>
+                  </li>
+                  <li>
+                    <span id="wind"> Wind: 13 mph </span>
+                  </li>
+               </ul>
+            </div>
+          <div class="row" id="forecast">
             <div class="col-2">
               Mon 31
               <br />
