@@ -28,6 +28,13 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .wrapper {
   max-width: 600px;
@@ -52,15 +59,9 @@ li:first-letter {
   font-weight: 400;
 }
 .weather-temp img {
-  margin-right: 15px;
-  height: 55px;
-  width: 55px;
-}
-.col-5 {
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  margin-right: 10px;
+  height: 60px;
+  width: 60px;
 }
 .weather-temp .units {
   position: relative;
@@ -77,11 +78,11 @@ li:first-letter {
   text-decoration: none;
 }
 
-.row {
+.weather-forecast {
   margin-top: 10px;
 }
 
-.row h3 {
+.weather-forecast h3 {
   color: #000000;
   font-size: 16px;
   font-weight: 400;
@@ -92,14 +93,14 @@ li:first-letter {
   font-style: bold;
 }
 
-.row img {
+.weather-forecast img {
   display: block;
   margin: 0 auto;
   height: 48px;
   width: 46px;
 }
 
-.forecast-temp {
+.weather-forecast-temp {
   text-align: center;
   color: #000000;
   font-size: 13px;
