@@ -74,3 +74,12 @@ function displayForecast(response) {
     </div>`;
   }
 }
+
+function search(city) {
+  let apiKey = "8542b50982e200d0127f4bfc3b2ce168";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
