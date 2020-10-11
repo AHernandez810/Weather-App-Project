@@ -17,141 +17,143 @@
     <div class="container">
       <div class="wrapper">
         <div class="weather-project">
-            <form id="search-form" class="mb-3">
-              <div class="row">
-                <div class="col-9">
-                  <input type="search" placeholder="Enter your location" class="form-control" id="city-input" autocomplete="off" />
-                </div>
-                <div class="col-3">
-                  <input type="submit" value="Search" class="btn btn-primary w-100" />
-                </div>
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input type="search" placeholder="Enter your location" class="form-control" id="city-input" autocomplete="off" />
               </div>
-            </form>
-            <div class="main-view">
-              <h2 id="location">Wappingers Falls, NY</h2>
-              <ul>
-                <li> 
-                  <span id="date">Thursday 11:40</span>
-                </li>
-                <li id="description">
+              <div class="col-3">
+                <input type="submit" value="Search" class="btn btn-primary w-100" />
+              </div>
+            </div>
+          </form>
+          <div class="main-view">
+            <h2 id="location">Wappingers Falls, NY</h2>
+            <ul>
+              <li> 
+                <span id="date">Thursday 11:40</span>
+              </li>
+              <li id="description">
                 Mostly Clear
-                </li>
-              </ul>
-            </div>
-            <div class="main-temp">
-              <div class="col-6">
-                <div class="weather-temp">
-                  <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-50-512.png" 
-                  alt="clear moon"
-                  class="float-left"
-                  width ="50" />
-                  <div class="float-left">
-                    <strong id="temperature">43</strong>
-                    <span class="units">
-                      <a href="#" id="celsius-link" class="active">°C</a> |
-                      <a href="#" id="fahrenheit-link">°F</a>
-                    </span>
-                  </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="main-temp">
+            <div class="col-6">
+              <div class="weather-temp">
+                <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-50-512.png" 
+                alt="clear moon"
+                class="float-left"
+                width ="50" />
+                <div class="float-left">
+                  <strong id="temperature">43</strong>
+                  <span class="units">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
                 </div>
               </div>
             </div>
-            <div class="col-6">
-               <ul>
-                 <li>
-                   <span id="humidity"> Humidity: 53% </span>
-                  </li>
-                  <li>
-                    <span id="wind"> Wind: 13 mph </span>
-                  </li>
-               </ul>
-            </div>
+          </div>
+          
+          <div class="col-6">
+            <ul>
+              <li>
+                <span id="humidity"> Humidity: 53% </span>
+              </li>
+              <li>
+                <span id="wind"> Wind: 13 mph </span>
+              </li>
+            </ul>
+          </div>
+          
           <div class="row" id="forecast">
             <div class="col-2">
               <h3>
                 Mon 12
               </h3>
               <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-02-256.png"
-               width="30" />
-               <div class="forecast-temp">
+              width="30" />
+              <div class="forecast-temp">
                 <strong>
                   59°
                 </strong>
                 52°
-               </div>
+              </div>
+            </div>
+            
+            <div class="col-2">
+              <h3>
+                Tue 13
+              </h3>
+              <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-02-256.png"
+              width="30" />
+              <div class="forecast-temp">
+                <strong>
+                  70°
+                </strong>
+                57°
+              </div>
           </div>
-
-        <div class="col-2">
+        
+          <div class="col-2">
           <h3>
-            Tue 13
+            Wed 14
           </h3>
           <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-02-256.png"
-            width="30" />
+          width="30" />
           <div class="forecast-temp">
             <strong>
               70°
             </strong>
-            57°
+            52°
           </div>
-        </div>
-
+          </div>
+        
           <div class="col-2">
-            <h3>
-              Wed 14
-            </h3>
-            <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-02-256.png"
-              width="30" />
-            <div class="forecast-temp">
-              <strong>
-                70°
-              </strong>
-              52°
-            </div>
-          </div>
-
-          <div class="col-2">
-            <h3>
-              Thu 15
-            </h3>
-            <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-04-256.png"
-              width="30" />
-            <div class="forecast-temp">
-              <strong>
-                72°
-              </strong>
-              52°
-            </div>
-          </div>
-
-        <div class="col-2">
           <h3>
-          Fri <br>
-          16
+            Thu 15
           </h3>
           <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-04-256.png"
-            width="30" />
+          width="30" />
+          <div class="forecast-temp">
+            <strong>
+              72°
+            </strong>
+            52°
+          </div>
+          </div>
+        
+         <div class="col-2">
+          <h3>
+            Fri <br>
+            16
+          </h3>
+          <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-04-256.png"
+          width="30" />
           <div class="forecast-temp">
             <strong>
               68°
             </strong>
             46°
           </div>
-        </div>
-
-          <div class="col-2">
-            <h3>
-              Sat 17
-            </h3>
-            <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-04-256.png"
-              width="30" />
-            <div class="forecast-temp">
-              <strong>
-                64°
-              </strong>
-              43°
-            </div>
           </div>
-
-        <small>
+        
+         <div class="col-2">
+          <h3>
+            Sat 17
+          </h3>
+          <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-04-256.png"
+          width="30" />
+          <div class="forecast-temp">
+            <strong>
+              64°
+            </strong>
+            43°
+          </div>
+          </div>
+          <small>
           <a
           href="https://github.com/AHernandez810/Weather-App-Project"
           target="blank"
@@ -162,6 +164,11 @@
       </div>
     </div>
     <script src="SRC/index.js"></script>
-  </body>
-  </html>
-  
+    
+    <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;">
+    </iframe>
+    <div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat='{"tlang":true,"tsbc":true,"pun":true,"mk":true,"ss":true}'
+    style="display: none;">
+  </div>
+</body>
+</html>
