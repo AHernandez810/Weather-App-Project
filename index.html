@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeatherAppProject</title>
+      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Quicksand&display=swap" rel="stylesheet" />
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -29,7 +30,7 @@
           </form>
 
           <div class="main-view">
-            <h2 id="location">Wappingers Falls, NY</h2>
+            <h2 id="location"> Wappingers Falls, NY </h2>
             <ul>
               <li> 
                 <span id="date">Thursday 11:40</span>
@@ -40,13 +41,14 @@
             </ul>
           </div>
           
-          <div class="main-temp">
+          <div class="row">
             <div class="col-6">
               <div class="weather-temp">
-                <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-50-512.png" 
+                <img src= "https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-27-512.png" 
                 alt="clear moon"
-                class="float-left"
-                width ="50" />
+                id = "weather-icon"
+                class="float-left"/>
+                
                 <div class="float-left">
                   <strong id="temperature">43</strong>
                   <span class="units">
@@ -60,11 +62,9 @@
           
           <div class="col-6">
             <ul>
-              <li>
-                <span id="humidity"> Humidity: 53% </span>
+              <li> <span id="humidity"> Humidity: 53% </span>
               </li>
-              <li>
-                <span id="wind"> Wind: 13 mph </span>
+              <li> <span id="wind"> Wind: 13 mph </span>
               </li>
             </ul>
           </div>
@@ -155,12 +155,12 @@
           </div>
       </div>
     </div>
+  <small>
+    <a href="https://github.com/AHernandez810/Weather-App-Project"
+    target="_blank">Open-Source</a>
+    by Ashley Hernandez
+  </small>
     <script src="SRC/index.js"></script>
-    
-    <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;">
-    </iframe>
-    <div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat='{"tlang":true,"tsbc":true,"pun":true,"mk":true,"ss":true}'
-    style="display: none;">
   </div>
 </body>
 </html>

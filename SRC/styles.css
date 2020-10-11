@@ -1,9 +1,5 @@
 body {
   font-family: "Quicksand", sans-serif;
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 h2 {
@@ -49,19 +45,23 @@ li:first-letter {
   margin-bottom: 20px;
 }
 
-.weather-temp img {
-  margin-right: 5px;
-  height: 65px;
-  width: 65px;
-}
-
 .weather-temp strong {
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
 }
-
+.weather-temp img {
+  margin-right: 15px;
+  height: 55px;
+  width: 55px;
+}
+.col-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 .weather-temp .units {
   position: relative;
   font-size: 16px;
@@ -107,7 +107,4 @@ li:first-letter {
   height: auto;
   line-height: 15px;
   white-space: nowrap;
-}
-.col {
-  color: #797a7e;
 }
