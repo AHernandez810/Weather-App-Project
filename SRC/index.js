@@ -50,3 +50,27 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `<div class="col-2>
+    <h3>
+    ${formatHours(forecast.dt * 1000)}
+    </h3>
+    <img src="https://cdn0.iconfinder.com/data/icons/${
+      response.data.weather[0].icon
+    }weather-filled-outline-6/64/weather_cloud_sun_moon_rain-27-512.png"/>
+    <div class="weather-forecast-temp">
+    <strong> 
+    ${Math.round(forecast.main.temp_max)}°
+    </strong>
+    ${Math.round(forecast.main.temp_min)}°
+    </div>
+    </div>`;
+  }
+}
