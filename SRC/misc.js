@@ -183,4 +183,75 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
-${response.data.weather[0].icon}
+${response.data.weather[0].icon}4
+
+
+   <div class="col-2">
+              <h3>
+                Tue
+              </h3>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png"
+              width="30" />
+              <div class="weather-forecast-temp">
+                <strong>
+                  70°
+                </strong>
+                57°
+              </div>
+          </div>
+        
+          <div class="col-2">
+          <h3>
+            Wed
+          </h3>
+          <img src="https://openweathermap.org/img/wn/10d@2x.png"
+          width="30" />
+          <div class="weather-forecast-temp">
+            <strong>
+              70°
+            </strong>
+            52°
+          </div>
+          </div>
+        
+          <div class="col-2">
+          <h3>
+            Thu
+          </h3>
+          <img src="https://openweathermap.org/img/wn/10d@2x.png"
+          width="30" />
+          <div class="weather-forecast-temp">
+            <strong>
+              72°
+            </strong>
+            52°
+          </div>
+          </div>
+        
+         <div class="col-2">
+          <h3>
+            Fri
+          </h3>
+          <img src="https://openweathermap.org/img/wn/10d@2x.png"
+          width="30" />
+          <div class="weather-forecast-temp">
+            <strong>
+              68°
+            </strong>
+            46°
+          </div>
+          </div>
+        
+         <div class="col-2">
+          <h3>
+            Sat
+          </h3>
+          <img src="https://openweathermap.org/img/wn/10d@2x.png"
+          width="30" />
+          <div class="weather-forecast-temp">
+            <strong>
+              64°
+            </strong>
+            43°
+          </div>
+          </div>

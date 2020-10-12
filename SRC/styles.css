@@ -60,7 +60,7 @@ li {
 }
 
 .weather-temp .active {
-  color: rgb(33, 33, 33);
+  color: #000000;
   cursor: default;
 }
 
@@ -86,7 +86,7 @@ li {
 .weather-forecast img {
   display: block;
   margin: 0 auto;
-  height: 48px;
+  height: 46px;
   width: 46px;
 }
 
