@@ -21,9 +21,12 @@ date.innerHTML = `${day} ${hour}:${min}`;
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let locationElement = document.querySelector("#location");
+  let descriptionElement = document.querySelector("#description");
+
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   locationElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 let apiKey = "8542b50982e200d0127f4bfc3b2ce168";
