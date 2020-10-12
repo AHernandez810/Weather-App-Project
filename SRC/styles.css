@@ -35,7 +35,7 @@ li {
   padding: 20px;
   border: 2px solid #f6f4e6;
   border-radius: 5px;
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 .main-view {
@@ -44,8 +44,8 @@ li {
 
 .weather-temp img {
   margin-right: 5px;
-  height: 60px;
-  width: 60px;
+  height: 65px;
+  width: 65px;
 }
 .weather-temp strong {
   color: #000000;
