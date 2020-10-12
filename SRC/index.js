@@ -1,44 +1,34 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
+let date = document.querySelector("#date");
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()];
-  return `${day} ${formatHours(timestamp)}`;
-}
+let now = new Date();
 
-function formatHours(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  return `${hours}:${minutes}`;
-}
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+let hour = now.getHours();
+let min = now.getMinutes();
+
+date.innerHTML = `${day} ${hour}:${min}`;
 
 function displayTemperature(response) {
-  let tempElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("#weather-icon");
+  let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
 
-  tempElement.innerHTML = Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -46,7 +36,7 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `https://cdn0.iconfinder.com/data/icons/${response.data.weather[0].icon}weather-filled-outline-6/64/weather_cloud_sun_moon_rain-27-512.png`
+    `https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-${response.data.weather[0].icon}.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
@@ -58,20 +48,24 @@ function displayForecast(response) {
 
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
-    forecastElement.innerHTML += `<div class="col-2>
-    <h3>
-    ${formatHours(forecast.dt * 1000)}
-    </h3>
-    <img src="https://cdn0.iconfinder.com/data/icons/${
-      response.data.weather[0].icon
-    }weather-filled-outline-6/64/weather_cloud_sun_moon_rain-27-512.png"/>
-    <div class="weather-forecast-temp">
-    <strong> 
-    ${Math.round(forecast.main.temp_max)}°
-    </strong>
-    ${Math.round(forecast.main.temp_min)}°
+    forecastElement.innerHTML += `
+    <div class="col-2">
+      <h3>
+        ${formatHours(forecast.dt * 1000)}
+      </h3>
+      <img
+        src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-${
+          forecast.weather[0].icon
+        }.png"
+      />
+      <div class="weather-forecast-temp">
+        <strong>
+          ${Math.round(forecast.main.temp_max)}Â°
+        </strong>
+        ${Math.round(forecast.main.temp_min)}Â°
+      </div>
     </div>
-    </div>`;
+  `;
   }
 }
 
@@ -81,7 +75,7 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  axios.get(apiUrl).then(dispalyForecast);
 }
 
 function handleSubmit(event) {
@@ -90,22 +84,22 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function showFarenTemp(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#temperature");
 
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let farenTemp = (celsiusTemperature * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(celsiusTemperature);
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
-function showCelTemp(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(celsiusTemperature);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
@@ -114,7 +108,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFarenTemp);
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelTemp);
+celsiusLink.addEventListener("click", displayCelsiusTemperature);

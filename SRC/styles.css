@@ -28,13 +28,6 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .wrapper {
   max-width: 600px;
@@ -52,16 +45,16 @@ li:first-letter {
   margin-bottom: 20px;
 }
 
+.weather-temp img {
+  margin-right: 10px;
+  height: 60px;
+  width: 60px;
+}
 .weather-temp strong {
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
-}
-.weather-temp img {
-  margin-right: 10px;
-  height: 60px;
-  width: 60px;
 }
 .weather-temp .units {
   position: relative;

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeatherAppProject</title>
-      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Quicksand&display=swap" rel="stylesheet" />
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
     crossorigin="anonymous"
     />
+   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Quicksand&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -21,10 +21,17 @@
           <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-9">
-                <input type="search" placeholder="Enter your location" class="form-control" id="city-input" autocomplete="off" />
+                <input type="search" 
+                placeholder="Enter your location"
+                 class="form-control" 
+                 id="city-input" 
+                 autocomplete="off" />
+
               </div>
               <div class="col-3">
-                <input type="submit" value="Search" class="btn btn-primary w-100" />
+                <input type="submit"
+                 value="Search"
+                  class="btn btn-primary w-100" />
               </div>
             </div>
           </form>
@@ -33,43 +40,38 @@
             <h2 id="location"> Wappingers Falls, NY </h2>
             <ul>
               <li> 
-                <span id="date">Thursday 11:40</span>
+                <span id="date">Thursday 11:00</span>
               </li>
               <li id="description">
                 Mostly Clear
               </li>
             </ul>
-          </div>
-          
-          <div class="row">
-            <div class="col-6">
-              <div class="weather-temp">
-                <img src= "https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-27-512.png" 
-                alt="clear moon"
-                id = "weather-icon"
-                class="float-left"/>
-                
-                <div class="float-left">
-                  <strong id="temperature">43</strong>
-                  <span class="units">
-                    <a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
+            <div class="row">
+              <div class="col-6">
+                <div class="cleafix weather-temp">
+                  <img src="https://cdn0.iconfinder.com/data/icons/weather-filled-outline-6/64/weather_cloud_sun_moon_rain-27-512.png"
+                  alt="Clear"
+                  class="float-left"
+                  />
+                  <div class="float-left">
+                  43°C | °F
+                   </div>
                 </div>
+              </div>
+              <div class="col-6">
+              <ul>
+                <li>
+                Humidity: 0%
+                </li>
+                <li>
+                Wind: 0 mph
+                </li>
+              </ul>
               </div>
             </div>
           </div>
           
-          <div class="col-6">
-            <ul>
-              <li> <span id="humidity"> Humidity: 53% </span>
-              </li>
-              <li> <span id="wind"> Wind: 13 mph </span>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="row weather-forecast" id="forecast">
+           <div class="row weather-forecast" id="forecast">
             <div class="col-2">
               <h3>
                 Mon 12
